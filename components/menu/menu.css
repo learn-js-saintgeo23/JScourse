@@ -1,0 +1,40 @@
+.menu {
+
+}
+
+.menu__title-link {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu__title + .menu__container {
+    margin-top: 10px;
+}
+
+.menu__container {
+    padding-left: 16px;
+}
+
+.menu__item + .menu__item {
+    margin-top: 10px;
+}
+
+.menu__content {
+    padding-top: 10px;
+}
+
+.menu__content-item {
+    padding-left: 16px;
+}
+
+.menu__content-item + .menu__content-item {
+    margin-top: 10px;
+}
+
+.menu__prefix {
+    font-weight: bold;
+}
+
+.menu__item-remove {
+    color: #f44336;
+}

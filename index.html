@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="components/app/app.css">
+    <link rel="stylesheet" type="text/css" href="components/menu/menu.css">
+    <title>Записная книжка</title>
+</head>
+<body>
+
+<div class="app">
+
+    <h1 class="title">Записная книжка</h1>
+
+    <div class="menu js-menu">
+        <div class="menu__title">
+            <a class="menu__title-link" href="javascript:;">Записная книжка</a>
+        </div><!-- /menu__title -->
+        <ul class="menu__container js-menu-container">
+            <li class="menu__item js-menu-item">
+                <span class="menu__item-title js-menu-item-title"></span>
+                <a class="menu__item-remove" href="javascript:;">&times;</a>
+                <ul class="menu__content js-menu-content">
+                    <li class="menu__content-item js-menu-content-item">
+                        <div class="menu__content-name">
+                            <span class="menu__prefix">Name: </span>
+                            <span class="menu__content-text js-menu-content-name"></span>
+                            <a class="menu__item-remove js-menu-remove" href="javascript:;">&times;</a>
+                        </div>
+                        <a class="menu__content-link js-menu-content-link" href="">
+                            <span class="menu__prefix">URL: </span>
+                            <span class="menu__content-text js-menu-content-url"></span>
+                        </a>
+                        <div class="menu__content-description">
+                            <span class="menu__prefix">Description: </span>
+                            <span class="menu__content-text js-menu-content-description"></span>
+                        </div>
+                    </li>
+                </ul><!-- /menu__content -->
+            </li><!-- /menu__item -->
+        </ul><!-- /menu__container -->
+
+    </div>
+</div>
+
+<script src="components/menu/menu.js"></script>
+<script src="components/app/app.js"></script>
+</body>
+</html>
