@@ -15,18 +15,20 @@
 
     <div class="menu js-menu">
         <div class="menu__title">
-            <a class="menu__title-link" href="javascript:;">Записная книжка</a>
+            <a class="menu__title-link" href="javascript:;">Разделы</a>
+            <a class="menu__item-add" href="javascript:;">&oplus;</a>
         </div><!-- /menu__title -->
         <ul class="menu__container js-menu-container">
             <li class="menu__item js-menu-item">
                 <span class="menu__item-title js-menu-item-title"></span>
-                <a class="menu__item-remove" href="javascript:;">&times;</a>
+                <a class="menu__item-add" href="javascript:;">&oplus;</a>
+                <a class="menu__item-remove" href="javascript:;">&otimes;</a>
                 <ul class="menu__content js-menu-content">
                     <li class="menu__content-item js-menu-content-item">
                         <div class="menu__content-name">
                             <span class="menu__prefix">Name: </span>
                             <span class="menu__content-text js-menu-content-name"></span>
-                            <a class="menu__item-remove js-menu-remove" href="javascript:;">&times;</a>
+                            <a class="menu__item-remove js-menu-remove" href="javascript:;">&otimes;</a>
                         </div>
                         <a class="menu__content-link js-menu-content-link" href="">
                             <span class="menu__prefix">URL: </span>
@@ -43,6 +45,26 @@
 
     </div>
 </div>
+
+<template data-action="section">
+    <form>
+        <h2>Добавить раздел</h2>
+        <label>Name: <input /></label>
+        <button type="submit">Добавить</button>
+        <a href="javascript:;">Отмена</a>
+    </form>
+</template>
+
+<template data-action="note">
+    <form>
+        <h2>Добавить запись</h2>
+        <label>Name: <input /></label>
+        <label>URL: <input /></label>
+        <label>Description: <textarea></textarea></label>
+        <button type="submit">Добавить</button>
+        <a href="javascript:;">Отмена</a>
+    </form>
+</template>
 
 <script src="components/menu/menu.js"></script>
 <script src="components/app/app.js"></script>
