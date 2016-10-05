@@ -8,7 +8,7 @@
       title: 'Рабочие',
       items: [
         {
-          name: 'mail.ru',
+          name: 'Mail.Ru',
           url: 'https://mail.ru',
           desc: 'Mail.Ru website',
         },
@@ -18,11 +18,11 @@
           desc: 'Yandex website',
         },
         {
-          name: 'google.com',
+          name: 'Google',
           url: 'https://google.com',
           desc: 'Google website',
-        }
-      ]
+        },
+      ],
     },
     {
       title: 'Развлечения',
@@ -37,12 +37,12 @@
           url: 'https://ifunny.co/',
           desc: 'Some fun stuff!',
         },
-      ]
+      ],
     },
   ];
 
   let menu = new Menu({
     el: document.querySelector('.js-menu'),
-    data
+    data,
   });
 })();

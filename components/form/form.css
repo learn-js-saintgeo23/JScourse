@@ -1,0 +1,28 @@
+.form {
+
+}
+
+.form__veil {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.form__veil.is-visible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__container {
+  width: 90%;
+  max-width: 800px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}

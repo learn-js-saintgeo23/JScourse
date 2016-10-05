@@ -5,24 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="components/app/app.css">
     <link rel="stylesheet" type="text/css" href="components/menu/menu.css">
+    <link rel="stylesheet" type="text/css" href="components/form/form.css">
     <title>Записная книжка</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
 <div class="app">
-
     <h1 class="title">Записная книжка</h1>
 
     <div class="menu js-menu">
-        <div class="menu__title">
+        <div class="menu__title js-menu-title">
             <a class="menu__title-link" href="javascript:;">Разделы</a>
-            <a class="menu__item-add" href="javascript:;">&oplus;</a>
+            <a class="menu__item-add js-menu-add" href="javascript:;">&oplus;</a>
         </div><!-- /menu__title -->
         <ul class="menu__container js-menu-container">
             <li class="menu__item js-menu-item">
                 <span class="menu__item-title js-menu-item-title"></span>
-                <a class="menu__item-add" href="javascript:;">&oplus;</a>
-                <a class="menu__item-remove" href="javascript:;">&otimes;</a>
+                <a class="menu__item-add js-menu-add" href="javascript:;">&oplus;</a>
+                <a class="menu__item-remove js-menu-remove" href="javascript:;">&otimes;</a>
                 <ul class="menu__content js-menu-content">
                     <li class="menu__content-item js-menu-content-item">
                         <div class="menu__content-name">
@@ -42,30 +60,63 @@
                 </ul><!-- /menu__content -->
             </li><!-- /menu__item -->
         </ul><!-- /menu__container -->
+    </div><!-- /menu -->
 
-    </div>
-</div>
+    <div class="form__veil js-form-veil">
+      <div class="form__container"></div>
+    </div><!-- /veil -->
+</div><!-- /app -->
 
-<template data-action="section">
-    <form>
-        <h2>Добавить раздел</h2>
-        <label>Name: <input /></label>
-        <button type="submit">Добавить</button>
-        <a href="javascript:;">Отмена</a>
-    </form>
+
+<template class="js-template" data-action="section">
+  <form class="form js-form">
+      <h2>Добавить раздел</h2>
+      <label class="form__label js-form-label">Name: <input class="form__input js-form-input" /></label>
+      <button class="form__submit js-form-submit" type="submit">Добавить</button>
+      <a class="form__cancel js-form-cancel" href="javascript:;">Отмена</a>
+  </form>
 </template>
 
-<template data-action="note">
-    <form>
-        <h2>Добавить запись</h2>
-        <label>Name: <input /></label>
-        <label>URL: <input /></label>
-        <label>Description: <textarea></textarea></label>
-        <button type="submit">Добавить</button>
-        <a href="javascript:;">Отмена</a>
-    </form>
+<template class="js-template" data-action="note">
+  <form class="form js-form">
+      <h2>Добавить запись</h2>
+      <label class="form__label js-form-label">Name: <input class="form__input js-form-input" /></label>
+      <label class="form__label js-form-label">URL: <input class="form__input js-form-input" /></label>
+      <label class="form__label js-form-label">Description: <textarea class="form__textarea js-form-input"></textarea></label>
+      <button class="form__submit js-form-submit" type="submit">Добавить</button>
+      <a class="form__cancel js-form-cancel" href="javascript:;">Отмена</a>
+  </form>
 </template>
 
+<template class="js-template" data-id="section">
+  <li class="menu__item js-menu-item">
+    <span class="menu__item-title js-menu-item-title"></span>
+    <a class="menu__item-add js-menu-add" href="javascript:;">&oplus;</a>
+    <a class="menu__item-remove js-menu-remove" href="javascript:;">&otimes;</a>
+    <ul class="menu__content js-menu-content">
+    </ul><!-- /menu__content -->
+  </li><!-- /menu__item -->
+</template>
+
+<template class="js-template" data-id="note">
+  <li class="menu__content-item js-menu-content-item">
+      <div class="menu__content-name">
+          <span class="menu__prefix">Name: </span>
+          <span class="menu__content-text js-menu-content-name"></span>
+          <a class="menu__item-remove js-menu-remove" href="javascript:;">&otimes;</a>
+      </div>
+      <a class="menu__content-link js-menu-content-link" href="">
+          <span class="menu__prefix">URL: </span>
+          <span class="menu__content-text js-menu-content-url"></span>
+      </a>
+      <div class="menu__content-description">
+          <span class="menu__prefix">Description: </span>
+          <span class="menu__content-text js-menu-content-description"></span>
+      </div>
+  </li>
+</template>
+
+<script src="components/form/form.js"></script>
 <script src="components/menu/menu.js"></script>
 <script src="components/app/app.js"></script>
 </body>
