@@ -63,7 +63,7 @@
                     contentItem.querySelector('.js-menu-content-name').innerHTML = obj.name;
                     contentItem.querySelector('.js-menu-content-link').setAttribute('href', obj.url);
                     contentItem.querySelector('.js-menu-content-url').innerHTML = obj.url;
-                    contentItem.querySelector('.js-menu-content-description').innerHTML = obj.description;
+                    contentItem.querySelector('.js-menu-content-description').innerHTML = obj.desc;
 
                     content.appendChild(contentItem);
                 });

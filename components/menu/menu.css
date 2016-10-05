@@ -35,6 +35,12 @@
     font-weight: bold;
 }
 
+.menu__item-add {
+    font-size: 24px;
+    color: #4CAF50;
+}
+
 .menu__item-remove {
+    font-size: 24px;
     color: #f44336;
 }
