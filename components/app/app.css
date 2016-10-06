@@ -14,12 +14,14 @@ html, body {
 
 body {
   background-color: #ffffff;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 .app {
   position: relative;
   height: 100%;
-  max-width: 1280px;
+  max-width: 380px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -27,4 +29,9 @@ body {
 .title {
   font-size: 36px;
   text-align: center;
+}
+
+.title + .menu,
+.menu + .form {
+  margin-top: 8px;
 }
