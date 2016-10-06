@@ -27,25 +27,26 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+  <div class="wrapper">
+    <div class="app">
+      <h1 class="title">Nota Bene</h1>
 
-<div class="app">
-  <h1 class="title">Nota Bene</h1>
+      <div class="menu js-menu">
+        <ul class="menu__container js-menu-container">
+          <li class="menu__item js-menu-item">
+            <a class="menu__item-text js-menu-itemText" href="javascript:;"></a>
+            <a class="menu__item-check js-menu-check" href="javascript:;">&#10003;</a>
+            <a class="menu__item-remove js-menu-remove" href="javascript:;">&#10006;</a>
+          </li>
+        </ul><!-- /menu__container -->
+      </div><!-- /menu -->
 
-  <div class="menu js-menu">
-    <ul class="menu__container js-menu-container">
-      <li class="menu__item js-menu-item">
-        <a class="menu__item-remove js-menu-remove" href="javascript:;">&times;</a>
-        <a class="menu__item-text js-menu-itemText" href="javascript:;"></a>
-      </li>
-    </ul><!-- /menu__container -->
-  </div><!-- /menu -->
-
-  <form class="form js-form">
-    <h2 class="form__title">Что еще купить?</h2>
-    <input class="form__input js-form-input" placeholder="Comma separated notes" />
-    <button class="form__submit js-form-submit" type="submit">Добавить</button>
-  </form><!-- /form -->
-</div><!-- /app -->
+      <form class="form js-form">
+        <button class="form__submit js-form-submit" type="submit">Add</button>
+        <div class="form__input-container"><input class="form__input js-form-input" placeholder="Comma separated notes" /></div>
+      </form><!-- /form -->
+    </div><!-- /app -->
+  </div>
 
 <script src="components/form/form.js"></script>
 <script src="components/menu/menu.js"></script>
