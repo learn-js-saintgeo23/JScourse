@@ -9,23 +9,23 @@
      * Конструктор класс Menu
      * @parm {Object} options
      */
-    constructor ({el, data}) {
-      this.el = el;
+    constructor ({data, container}) {
       this.data = data;
-
-      this.container = this.el.querySelector('.js-menu-container');
-      this.item = this.container.querySelector('.js-menu-item');
-
-      this._init();
+      this.container = document.querySelector(container);
 
       this.render();
+
+      this._init();
+    }
+
+    render () {
     }
 
     /**
      * Установка обработчиков событий
      */
     _init () {
-      this.el.addEventListener('click', this._onCLick.bind(this));
+      // this.el.addEventListener('click', this._onCLick.bind(this));
     }
 
     /**
@@ -40,21 +40,6 @@
       } else if (target.closest('.js-menu-item')) {
         this.changeBought(target.closest('.js-menu-item').querySelector('.js-menu-itemText'));
       }
-    }
-
-    render () {
-      this.container.innerHTML = '';
-
-      this.data.forEach((obj) => {
-        const item = this.item.cloneNode(true);
-        item.querySelector('.js-menu-itemText').innerHTML = obj.name;
-        if (obj.isBought) {
-          item.classList.add('is-bought');
-        }
-
-        this.container.appendChild(item);
-      });
-
     }
 
     remove(target) {

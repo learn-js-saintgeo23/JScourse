@@ -7,21 +7,24 @@
   align-items: center;
   justify-content: space-between;
   height: 50px;
+  border-radius: 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   box-sizing: border-box;
   cursor: pointer;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  padding: 0 8px;
+  padding: 0 8px 0 16px;
+  transition: box-shadow 150ms ease-out;
 }
 
 .menu__item:hover {
-  background-color: #E1F5FE;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.26);
 }
 
 .menu__item + .menu__item {
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .menu__item-text {
@@ -58,6 +61,7 @@
   -ms-user-select: none;
   margin-left: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  transition: all 2000 ease-out;
 }
 
 .menu__item-check {

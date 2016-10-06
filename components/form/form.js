@@ -2,17 +2,20 @@
   'use strict';
 
   class Form {
-    constructor(type) {
-      console.log(type);
-      this.type = type;
-      this.container = document.querySelector('.form__container');
-      this.form = document.querySelector(`[data-action="${this.type}"]`).innerHTML;
+    constructor({data, container, onSubmit}) {
+      this.data = data;
+      this.container = document.querySelector(container);
+      this.onSubmit = onSubmit.bind(this);
 
       this.render();
     }
 
     render() {
-      this.container.innerHTML = this.form;
+      const source   = document.querySelector("#form-template").innerHTML;
+      const template = Handlebars.compile(source);
+      const form = template();
+
+      this.container.appendChild(form);
     }
   }
 

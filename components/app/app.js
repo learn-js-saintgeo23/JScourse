@@ -26,8 +26,16 @@
     },
   ];
 
-  let menu = new Menu({
-    el: document.querySelector('.js-menu'),
+  // let menu = new Menu({
+  //   data,
+  //   container: '.app',
+  // });
+
+  let form = new Form({
     data,
-  });
+    container: '.app',
+    onSubmit: function () {
+      return;
+    }
+  })
 })();

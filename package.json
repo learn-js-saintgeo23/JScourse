@@ -12,9 +12,12 @@
     "url": "git+https://github.com/saintgeo23/JScourse.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/saintgeo23/JScourse/issues"
   },
-  "homepage": "https://github.com/saintgeo23/JScourse#readme"
+  "homepage": "https://github.com/saintgeo23/JScourse#readme",
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  }
 }
