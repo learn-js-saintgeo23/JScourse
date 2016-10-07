@@ -36,7 +36,9 @@
   let form = new Form({
     el: '.js-form',
     data,
-    onSubmit() {
+    onSubmit(value) {
+      menu.add(value);
+      this.clear();
       this.close();
     }
   })
