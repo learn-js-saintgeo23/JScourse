@@ -8,7 +8,7 @@
     constructor({ el, data, onSubmit }) {
       this.el = document.querySelector(el);
       this.data = data;
-      this.onSubmit = onSubmit.bind(this);
+      this.onSubmit = onSubmit;
 
       this.render();
     }
@@ -22,7 +22,25 @@
     }
 
     _init () {
-      this.el.addEventListener('click', () => { console.log('click!'); });
+      this.el.addEventListener('click', this._onClick.bind(this));
+    }
+
+    _onClick(event) {
+      const target = event.target;
+
+      if (target.closest('.js-form-submit')) {
+        if (this.el.classList.contains('is-collapsed')) {
+          this.open();
+        }
+
+
+      } else if (target.closest('.js-menu-item')) {
+        this.changeDone(target.closest('.js-menu-item').querySelector('.js-menu-itemText'));
+      }
+    }
+
+    open() {
+      this.el.classList.remove('is-collapsed');
     }
   }
 

@@ -1,5 +1,5 @@
 .menu {
-  height: 480px;
+  height: 466px;
   overflow-y: auto;
   padding: 16px 16px 8px;
   box-sizing: border-box;
@@ -40,6 +40,7 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   font-weight: lighter;
+  text-align: left;
   padding-left: 16px;
 }
 

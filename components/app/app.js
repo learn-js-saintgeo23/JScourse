@@ -25,26 +25,6 @@
         name: 'Котлеты',
         isDone: false,
       },
-      {
-        name: 'Хлеб',
-        isDone: false,
-      },
-      {
-        name: 'Молоко',
-        isDone: true,
-      },
-      {
-        name: 'Чай',
-        isDone: false,
-      },
-      {
-        name: 'Печенье',
-        isDone: false,
-      },
-      {
-        name: 'Котлеты',
-        isDone: false,
-      },
     ],
   };
 
@@ -56,8 +36,8 @@
   let form = new Form({
     el: '.js-form',
     data,
-    onSubmit: function () {
-      return;
+    onSubmit() {
+      this.close();
     }
   })
 })();

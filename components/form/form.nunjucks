@@ -1,4 +1,4 @@
 <form class="form-container">
-  <button class="form__submit js-form-submit" type="submit">Add</button>
   <div class="form__input-container"><input class="form__input js-form-input" placeholder="Comma separated notes" /></div>
+  <a class="form__submit js-form-submit" href="javascript:;">+</a>
 </form><!-- /form -->

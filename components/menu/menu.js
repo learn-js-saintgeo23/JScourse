@@ -38,7 +38,7 @@
      * @param {MouseEvent} event
      */
     _onCLick (event) {
-      let target = event.target;
+      const target = event.target;
 
       if (target.closest('.js-menu-remove')) {
         this.remove(target);
