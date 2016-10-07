@@ -1,21 +1,28 @@
 !(function () {
   'use strict';
 
+  let nunjucks = window.nunjucks;
+  nunjucks.configure({ autoescape: true });
+
   class Form {
-    constructor({data, container, onSubmit}) {
+    constructor({ el, data, onSubmit }) {
+      this.el = document.querySelector(el);
       this.data = data;
-      this.container = document.querySelector(container);
       this.onSubmit = onSubmit.bind(this);
 
       this.render();
     }
 
     render() {
-      const source   = document.querySelector("#form-template").innerHTML;
-      const template = Handlebars.compile(source);
-      const form = template();
+      const html = nunjucks.render('components/form/form.nunjucks');
 
-      this.container.appendChild(form);
+      this.el.innerHTML = html;
+
+      this._init();
+    }
+
+    _init () {
+      this.el.addEventListener('click', () => { console.log('click!'); });
     }
   }
 

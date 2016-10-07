@@ -18,6 +18,5 @@
   },
   "homepage": "https://github.com/saintgeo23/JScourse#readme",
   "dependencies": {
-    "handlebars": "^4.0.5"
   }
 }

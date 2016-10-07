@@ -30,32 +30,16 @@
   <div class="wrapper">
     <div class="app">
       <h1 class="title">Nota Bene</h1>
+      <div class="menu js-menu">
+      </div><!-- /menu -->
 
+      <div class="form js-form">
+      </div><!-- /form -->
     </div><!-- /app -->
-  </div>
+  </div><!-- /wrapper -->
 
-  <script id="menu-template" type="text/x-handlebars-template">
-    <div class="menu js-menu">
-      <ul class="menu__container js-menu-container">
-        {% for item in items %}
-          <li class="menu__item js-menu-item {{ 'is-bought' if item.isBought }}">
-            <a class="menu__item-text js-menu-itemText" href="javascript:;">{{ item.name }}</a>
-            <a class="menu__item-check js-menu-check" href="javascript:;">&#10003;</a>
-            <a class="menu__item-remove js-menu-remove" href="javascript:;">&#10006;</a>
-          </li>
-        {% endfor %}
-      </ul><!-- /menu__container -->
-    </div><!-- /menu -->
-  </script>
-
-  <script id="form-template" type="text/x-handlebars-template">
-    <form class="form js-form">
-      <button class="form__submit js-form-submit" type="submit">Add</button>
-      <div class="form__input-container"><input class="form__input js-form-input" placeholder="Comma separated notes" /></div>
-    </form><!-- /form -->
-  </script>
-
-<!-- <script src="components/menu/menu.js"></script> -->
+<script src="vendors/nunjucks/nunjucks.min.js"></script>
+<script src="components/menu/menu.js"></script>
 <script src="components/form/form.js"></script>
 <script src="components/app/app.js"></script>
 </body>

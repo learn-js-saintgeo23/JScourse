@@ -3,37 +3,39 @@
 
   let Menu = window.Menu;
 
-  let data = [
-    {
-      name: 'Хлеб',
-      isBought: false,
-    },
-    {
-      name: 'Молоко',
-      isBought: true,
-    },
-    {
-      name: 'Чай',
-      isBought: false,
-    },
-    {
-      name: 'Печенье',
-      isBought: false,
-    },
-    {
-      name: 'Котлеты',
-      isBought: false,
-    },
-  ];
+  let data = {
+    items: [
+      {
+        name: 'Хлеб',
+        isDone: false,
+      },
+      {
+        name: 'Молоко',
+        isDone: true,
+      },
+      {
+        name: 'Чай',
+        isDone: false,
+      },
+      {
+        name: 'Печенье',
+        isDone: false,
+      },
+      {
+        name: 'Котлеты',
+        isDone: false,
+      },
+    ],
+  };
 
-  // let menu = new Menu({
-  //   data,
-  //   container: '.app',
-  // });
+  let menu = new Menu({
+    el: '.js-menu',
+    data,
+  });
 
   let form = new Form({
+    el: '.js-form',
     data,
-    container: '.app',
     onSubmit: function () {
       return;
     }

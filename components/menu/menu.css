@@ -15,7 +15,7 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  padding: 0 8px 0 16px;
+  padding: 0 8px 0 8px;
   transition: box-shadow 150ms ease-out;
 }
 
@@ -36,9 +36,10 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   font-weight: lighter;
+  padding-left: 16px;
 }
 
-.menu__item.is-bought > .menu__item-text {
+.menu__item.is-done > .menu__item-text {
   text-decoration: line-through;
   color: #BDBDBD;
 }
@@ -68,6 +69,6 @@
   color: #ffffff;
 }
 
-.menu__item.is-bought > .menu__item-check {
+.menu__item.is-done > .menu__item-check {
   background-color: #28d8b2;
 }

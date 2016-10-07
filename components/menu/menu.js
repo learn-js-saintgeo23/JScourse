@@ -3,29 +3,34 @@
 
   let Form = window.Form;
 
+  let nunjucks = window.nunjucks;
+  nunjucks.configure({ autoescape: true });
+
   class Menu {
 
     /**
      * Конструктор класс Menu
      * @parm {Object} options
      */
-    constructor ({data, container}) {
+    constructor ({ el, data }) {
+      this.el = document.querySelector(el);
       this.data = data;
-      this.container = document.querySelector(container);
-
-      this.render();
 
       this._init();
+
+      this.render();
     }
 
     render () {
+      const html = nunjucks.render('components/menu/menu.nunjucks', this.data);
+      this.el.innerHTML = html;
     }
 
     /**
      * Установка обработчиков событий
      */
     _init () {
-      // this.el.addEventListener('click', this._onCLick.bind(this));
+      this.el.addEventListener('click', this._onCLick.bind(this));
     }
 
     /**
@@ -38,7 +43,7 @@
       if (target.closest('.js-menu-remove')) {
         this.remove(target);
       } else if (target.closest('.js-menu-item')) {
-        this.changeBought(target.closest('.js-menu-item').querySelector('.js-menu-itemText'));
+        this.changeDone(target.closest('.js-menu-item').querySelector('.js-menu-itemText'));
       }
     }
 
@@ -53,19 +58,19 @@
       }
     }
 
-    changeBought(target) {
+    changeDone(target) {
       const name = target.innerHTML;
-        console.log(name);
-      this.data.forEach((obj) => {
+      this.data.items.forEach((obj) => {
         if (obj.name === name) {
-          obj.isBought = !obj.isBought;
+          obj.isDone = !obj.isDone;
           if (obj.isBought) {
-            target.classList.add('is-bought');
+            target.classList.add('is-done');
           } else {
-            target.classList.remove('is-bought');
+            target.classList.remove('is-done');
           }
         }
       });
+
       this.render();
     }
   }
