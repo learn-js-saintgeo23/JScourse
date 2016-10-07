@@ -2,7 +2,7 @@
   {% for item in items %}
     <li class="menu__item js-menu-item {{ 'is-done' if item.isDone }}">
       <a class="menu__item-text js-menu-itemText" href="javascript:;">{{ item.name }}</a>
-      <a class="menu__item-check js-menu-check" href="javascript:;">&#10003;</a>
+      <span class="menu__item-check js-menu-check">&#10003;</span>
       <a class="menu__item-remove js-menu-remove" href="javascript:;">&#10006;</a>
     </li>
   {% endfor %}

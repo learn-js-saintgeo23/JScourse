@@ -1,5 +1,8 @@
 .menu {
-  height: 500px;
+  height: 480px;
+  overflow-y: auto;
+  padding: 16px 16px 8px;
+  box-sizing: border-box;
 }
 
 .menu__item {
@@ -8,7 +11,7 @@
   justify-content: space-between;
   height: 50px;
   border-radius: 50px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
   box-sizing: border-box;
   cursor: pointer;
   user-select: none;
@@ -16,11 +19,12 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   padding: 0 8px 0 8px;
+  background-color: #ffffff;
   transition: box-shadow 150ms ease-out;
 }
 
 .menu__item:hover {
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.26);
 }
 
 .menu__item + .menu__item {
@@ -61,8 +65,13 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   margin-left: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: all 2000 ease-out;
+}
+
+.menu__item-remove:hover {
+  background-color: #EC7063;
+  color: #ffffff;
 }
 
 .menu__item-check {
