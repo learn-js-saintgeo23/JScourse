@@ -48,14 +48,8 @@
     }
 
     remove(target) {
-      let victim;
-      let intention;
-      intention = confirm('Удалить этот пункт?');
-      victim = target.closest('.js-menu-itemText');
-
-      if (intention) {
-        victim.parentElement.removeChild(victim);
-      }
+      const victim = target.closest('.js-menu-item');
+      victim.parentElement.removeChild(victim);
     }
 
     changeDone(target) {
